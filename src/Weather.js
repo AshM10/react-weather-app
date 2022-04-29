@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
-import { search } from "language-tags";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
