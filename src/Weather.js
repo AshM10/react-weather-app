@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -69,8 +70,7 @@ export default function Weather(props) {
           </ul>
           <div className="row mt-3">
             <div className="col-6">
-              <WeatherIcon code={weatherData.iconUrl} />
-
+              <WeatherIcon code={weatherData.iconUrl} size={52} />
               <WeatherTemperature celsius={weatherData.temperature} />
             </div>
             <div className="col-6">
@@ -81,6 +81,7 @@ export default function Weather(props) {
             </div>
           </div>
         </div>
+        <WeatherForecast />
       </div>
     );
   } else {
