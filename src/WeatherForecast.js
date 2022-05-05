@@ -12,20 +12,29 @@ export default function WeatherForecast(props) {
     setLoaded(true);
   }
 
+  function day() {
+    let date = new Date(forecast[0].dt * 1000);
+    let day = date.getDay();
+
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+    return days[day];
+  }
+
   if (loaded) {
     console.log(forecast);
     return (
       <div className="WeatherForecast">
         <div className="row">
           <div className="col">
-            <div className="WeatherForecast-day">{forecast[0].dt}</div>
+            <div className="WeatherForecast-day">{day()}</div>
             <WeatherIcon code={forecast[0].weather[0].icon} size={36} />
             <div className="WeatherForecast-temperatures">
               <span className="WeatherForecast-temperature-max">
-                {forecast[0].temp.max}°
+                {Math.round(forecast[0].temp.max)}°
               </span>
               <span className="WeatherForecast-temperature-min">
-                {forecast[0].temp.min}°
+                {Math.round(forecast[0].temp.min)}°
               </span>
             </div>
           </div>
