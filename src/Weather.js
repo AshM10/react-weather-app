@@ -73,7 +73,7 @@ export default function Weather(props) {
             <div className="col-2">
               <WeatherIcon code={weatherData.iconUrl} size={60} />
             </div>
-            <div className="col-6 text-warning">
+            <div className="col-6">
               <WeatherTemperature celsius={weatherData.temperature} />
             </div>
             <div className="col-4">
