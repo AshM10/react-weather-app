@@ -37,6 +37,7 @@
 }
 
 .Weather .temperature {
+  padding-left: 40px;
   font-weight: bold;
   color: #c06318;
   font-size: 64px;
