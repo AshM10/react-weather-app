@@ -62,3 +62,25 @@
   background-color: #c06318;
   border-color: #c06318;
 }
+
+@media (max-width: 900px) {
+  .Weather h1 {
+    text-align: center;
+  }
+
+  .Weather ul {
+    text-align: center;
+  }
+
+  .Weather .btn {
+    font-size: smaller;
+  }
+
+  .Weather .weatherStat {
+    text-align: center;
+  }
+
+  .Weather .weatherSpinner {
+    color: red;
+  }
+}

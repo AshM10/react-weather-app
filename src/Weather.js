@@ -64,7 +64,7 @@ export default function Weather(props) {
         <div className="WeatherInfo">
           <h1>{weatherData.city}</h1>
           <div className="row mt-3">
-            <div className="col-sm-7">
+            <div className="col-7">
               <ul>
                 <li>
                   {" "}
@@ -75,10 +75,10 @@ export default function Weather(props) {
                 <li>Wind: {weatherData.wind} km/h</li>
               </ul>
             </div>
-            <div className="col-1">
+            <div className="col-1 weatherSpinner">
               <WeatherIcon code={weatherData.iconUrl} size={60} />
             </div>
-            <div className="col-sm-4">
+            <div className="col-md-4 weatherStat">
               <WeatherTemperature celsius={weatherData.temperature} />
             </div>
           </div>
